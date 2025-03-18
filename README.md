@@ -24,7 +24,7 @@ In this Nanodegree program, I acquired the necessary skills to work with both re
 
 ***As part of the `Management of Relational & Non-Relational Databases` section, I learned how***:
 
-1. to build normalized, consistent, and performant relational data models using SQL Database Definition Language (DDL) and Database Manipulation Language (DML).
+1. to build normalized, consistent, and performant relational data models using SQL Database Definition Language (`DDL`) and Database Manipulation Language (`DML`).
 2. about the tradeoffs between relational databases and their non-relational counterparts,
 3. distinguish and justify the choice of relational databases vs. non-relational counterpart for different scenarios,
 4. learn about MongoDB and Redis to get an understanding of the differences in behaviors and requirements for non-relational databases.
