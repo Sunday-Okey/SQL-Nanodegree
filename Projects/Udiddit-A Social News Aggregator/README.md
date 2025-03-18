@@ -1,3 +1,7 @@
-## Deforestation Exploration
+# Project: Udiddit, A Social News Aggregator
 
-SQL is most commonly used to manipulate and analyze data to inform decision making. Utilizing Advanced SQL, I contributed to an organization dedicated to combating deforestation globally and promoting environmental awareness. My responsibilities included data wrangling, where I rectified erroneous values within tables, integrated additional categorical and quantitative variables through table joins, and generated new perspectives on data by filtering based on specified criteria. Through this analysis, I was able to identify regions experiencing significant forest depletion and pinpointed areas with substantial forest coverage. Finally, I synthesized findings into comprehensive reports for dissemination to leadership, aiding informed decision-making processes.
+## Introduction
+
+In this project, I designed and built a highly performant relational database schema needed to build a fully functioning social news aggregator website.
+
+Udiddit is a social news aggregator, content rating, and discussions website. On Udiddit, registered users are able to link to external content or post their own text content about various topics, ranging from common topics such as photography and food, to more arcane ones such as horse masks or birds with arms. In turn, other users can comment on these posts, and each user is allowed to cast a vote about each post, either in an up (like) or down (dislike) direction.
