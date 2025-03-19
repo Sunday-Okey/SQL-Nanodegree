@@ -1,8 +1,9 @@
 # SQL-Nanodegree 
 
 
-1. [Project: Udiddit, A Social News Aggregator](https://github.com/Sunday-Okey/SQL-Nanodegree/tree/main/Projects/Udiddit-A%20Social%20News%20Aggregator)
-2. [Deforestation Exploration](https://github.com/Sunday-Okey/SQL-Nanodegree/tree/main/Projects/Deforestation%20Exploration)
+### 1. [Project: Udiddit, A Social News Aggregator](https://github.com/Sunday-Okey/SQL-Nanodegree/tree/main/Projects/Udiddit-A%20Social%20News%20Aggregator)
+
+### 2. [Deforestation Exploration](https://github.com/Sunday-Okey/SQL-Nanodegree/tree/main/Projects/Deforestation%20Exploration)
 
 
 
