@@ -14,6 +14,7 @@ Udiddit is a social news aggregator, content rating, and discussions website. On
 
 
 
+## The Solution
 
 ![image](https://github.com/user-attachments/assets/7012c9c0-5a23-47b2-8a14-1bb124c8bf65)
 
