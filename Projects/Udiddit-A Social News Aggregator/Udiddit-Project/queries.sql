@@ -43,9 +43,11 @@ CREATE TABLE IF NOT EXISTS "posts" (
     "url" VARCHAR,
     "text_content" TEXT,
     "created_at" TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-    CONSTRAINT "non_empty_post" CHECK (TRIM("title") <> '')
-    CONSTRAINT "url_or_text_content" CHECK (
-        "url" IS NOT NULL OR "text_content" IS NOT NULL)
+    CONSTRAINT "non_empty_post" CHECK (TRIM("title") <> ''),
+    CONSTRAINT url_or_text_content CHECK (
+        ("url" IS NOT NULL AND "text_content" IS NULL) OR
+        ("url" IS NULL AND "text_content" IS NOT NULL))
+    
 ); 
 
 
@@ -67,7 +69,7 @@ CREATE TABLE IF NOT EXISTS "comments" (
 CREATE TABLE IF NOT EXISTS "votes" (
     "id" SERIAL PRIMARY KEY,
     "user_id" INTEGER REFERENCES "users" ("id") ON DELETE SET NULL,
-    "post_id" INTEGER NOT NULL REFERENCES "posts" ("id") ON DELETE CASCADE
+    "post_id" INTEGER NOT NULL REFERENCES "posts" ("id") ON DELETE CASCADE,
     "vote" INTEGER NOT NULL,
     CONSTRAINT "user_vote" CHECK ("vote" IN (1, -1)),
     CONSTRAINT "unique_user_post" UNIQUE ("user_id", "post_id")
@@ -171,7 +173,7 @@ INSERT INTO "posts" (
 SELECT
     u.id,
     t.id,
-    b.title,
+    LEFT(b.title, 100),
     b.url,
     b.text_content
 FROM
