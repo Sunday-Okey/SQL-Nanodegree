@@ -36,7 +36,8 @@ i.	Hint: you can store the (up/down) value of the vote as the values 1 and -1 re
 ii.	If the user who cast a vote gets deleted, then all their votes will remain, but will become dissociated from the user.
 iii.	If a post gets deleted, then all the votes for that post should be automatically deleted too.
 
-2.	Guideline #2: here is a list of queries that Udiddit needs in order to support its website and administrative interface. Note that you don’t need to produce the DQL for those queries: they are only provided to guide the design of your new database schema.
+2.	Guideline #2: here is a list of queries that Udiddit needs in order to support its website and administrative interface.
+3.	Note that you don’t need to produce the DQL for those queries: they are only provided to guide the design of your new database schema.
 a.	List all users who haven’t logged in in the last year. -
 b.	List all users who haven’t created any post.  done
 c.	Find a user by their username. - done
@@ -50,9 +51,13 @@ j.	List all the direct children of a parent comment. done
 k.	List the latest 20 comments made by a given user.
 l.	Compute the score of a post, defined as the difference between the number of upvotes and the number of downvotes
 
-3.	Guideline #3: you’ll need to use normalization, various constraints, as well as indexes in your new database schema. You should use named constraints and indexes to make your schema cleaner.
+4.	Guideline #3: you’ll need to use normalization, various constraints, as well as indexes in your new database schema.
+   You should use named constraints and indexes to make your schema cleaner.
 
-4.	Guideline #4: your new database schema will be composed of five (5) tables that should have an auto-incrementing id as their primary key.
+5.	Guideline #4: your new database schema will be composed of five (5) tables that should have an auto-incrementing id as their primary key.
+
+![image](https://github.com/user-attachments/assets/f3503be6-826e-4b1e-a288-ed26476aa477)
+
 
 
 
