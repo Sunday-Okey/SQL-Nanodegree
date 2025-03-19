@@ -1,8 +1,13 @@
 # SQL-Nanodegree 
-<img width="679" alt="image" src="https://github.com/user-attachments/assets/d487060c-1e78-4c04-90da-b5d038c75ad6" />
+
 
 1. [Project: Udiddit, A Social News Aggregator](https://github.com/Sunday-Okey/SQL-Nanodegree/tree/main/Projects/Udiddit-A%20Social%20News%20Aggregator)
-2. []()
+2. [Deforestation Exploration](https://github.com/Sunday-Okey/SQL-Nanodegree/tree/main/Projects/Deforestation%20Exploration)
+
+
+
+<img width="679" alt="image" src="https://github.com/user-attachments/assets/d487060c-1e78-4c04-90da-b5d038c75ad6" />
+
 
 ## Introduction
 
