@@ -16,9 +16,10 @@ DROP TABLE IF EXISTS "votes" CASCADE;
 CREATE TABLE IF NOT EXISTS "users"  (
     "id" SERIAL PRIMARY KEY,
     "username" VARCHAR(25) NOT NULL,
-    "last_login" TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-    CONSTRAINT "unique_username" UNIQUE ("username"),
-    CONSTRAINT "non_empty_username" CHECK (TRIM("username") != '')
+    "login_time" TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT "username_not_empty" CHECK (TRIM("username") != ''),
+    CONSTRAINT "distinct_user" UNIQUE ("username")
+    
 ); 
 
 
@@ -29,8 +30,8 @@ CREATE TABLE IF NOT EXISTS "topics" (
     "id" SERIAL PRIMARY KEY,
     "topic" VARCHAR(30) NOT NULL,
     "description" VARCHAR(500) DEFAULT NULL,
-    CONSTRAINT "unique_topic" UNIQUE ("topic"),
-    CONSTRAINT "non_empty_topic" CHECK (TRIM("topic") <> '')
+    CONSTRAINT "topic_not_empty" CHECK (TRIM("topic") <> ''),
+    CONSTRAINT "distinct_topic" UNIQUE ("topic")
 
 );
 
@@ -42,24 +43,25 @@ CREATE TABLE IF NOT EXISTS "posts" (
     "title" VARCHAR(100) NOT NULL,
     "url" VARCHAR,
     "text_content" TEXT,
-    "created_at" TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-    CONSTRAINT "non_empty_post" CHECK (TRIM("title") <> ''),
-    CONSTRAINT url_or_text_content CHECK (
-        ("url" IS NOT NULL AND "text_content" IS NULL) OR
-        ("url" IS NULL AND "text_content" IS NOT NULL))
+    "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT "post_not_empty" CHECK (TRIM("title") <> ''),
+    CONSTRAINT "text_content_or_url" CHECK (
+        ("url" IS NULL AND "text_content" IS NOT NULL) OR
+        ("url" IS NOT NULL AND "text_content" IS NULL))
     
 ); 
+
 
 
 -- Comments Table
 CREATE TABLE IF NOT EXISTS "comments" (
     "id" SERIAL PRIMARY KEY,
     "text_content" TEXT NOT NULL,
-    "user_id" INTEGER REFERENCES "users" ("id") ON DELETE SET NULL,
     "post_id" INTEGER NOT NULL REFERENCES "posts" ("id") ON DELETE CASCADE,
+    "user_id" INTEGER REFERENCES "users" ("id") ON DELETE SET NULL,
     "parent_comment_id" INTEGER REFERENCES "comments" ("id") ON DELETE CASCADE,
-    "created_at" TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-    CONSTRAINT "non_empty_comment" CHECK (TRIM("text_content") != '')
+    "created_at" TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT "comment_not_empty" CHECK (TRIM("text_content") != '')
 );
 
 
@@ -80,7 +82,7 @@ CREATE TABLE IF NOT EXISTS "votes" (
 -- INDEXES TO SPEED UP QUERIES
 
 -- a.	List all users who haven’t logged in in the last year. 
-CREATE INDEX "users_last_login" ON "users" ("last_login");
+CREATE INDEX "users_last_login" ON "users" ("login_time");
 
 -- b.	List all users who haven’t created any posts. 
 
