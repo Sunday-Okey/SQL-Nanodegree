@@ -9,14 +9,6 @@
 
 
 
-<img width="679" alt="image" src="https://github.com/user-attachments/assets/d487060c-1e78-4c04-90da-b5d038c75ad6" />
-
-
-
-![image](https://github.com/user-attachments/assets/53b77cb2-4234-4002-a516-ac50cbafa729)
-
-
-
 ## Introduction
 
 ### Why a course on SQL?
@@ -45,3 +37,11 @@ In this Nanodegree program, I acquired the necessary skills to work with both re
 3. distinguish and justify the choice of relational databases vs. non-relational counterpart for different scenarios,
 4. learn about MongoDB and Redis to get an understanding of the differences in behaviors and requirements for non-relational databases.
 5. to apply all of this knowledge to build the supporting data structures for a social news aggregator website.
+
+
+<img width="679" alt="image" src="https://github.com/user-attachments/assets/d487060c-1e78-4c04-90da-b5d038c75ad6" />
+
+
+
+![image](https://github.com/user-attachments/assets/53b77cb2-4234-4002-a516-ac50cbafa729)
+
