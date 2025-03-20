@@ -3,7 +3,7 @@
 
 ### 1. [Project: Udiddit, A Social News Aggregator](https://github.com/Sunday-Okey/SQL-Nanodegree/tree/main/Projects/Udiddit-A%20Social%20News%20Aggregator)
 
-### 2. [Deforestation Exploration](https://github.com/Sunday-Okey/SQL-Nanodegree/tree/main/Projects/Deforestation%20Exploration
+### 2. [Deforestation Exploration](https://github.com/Sunday-Okey/SQL-Nanodegree/tree/main/Projects/Deforestation%20Exploration)
 
 
 
@@ -12,7 +12,7 @@
 
 
 
-![image](https://github.com/user-attachments/assets/dcfbd371-27bc-49f1-a6a1-7fcce1ce00b3)
+![image](https://github.com/user-attachments/assets/53b77cb2-4234-4002-a516-ac50cbafa729)
 
 
 
